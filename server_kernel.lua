@@ -11,7 +11,7 @@ function t_cls(_m)
 end
 
 m = peripheral.wrap("top")
-cls(m)
+m_cls(m)
 m.setTextScale(0.5)
 
 m.setTextColor(colors.pink)

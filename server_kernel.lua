@@ -7,7 +7,7 @@ end
 
 m = peripheral.wrap("top")
 cls(m)
-m.setTextScale("0.5")
+m.setTextScale(0.5)
 
 m.setTextColor(colors.pink)
 m.write("Running KittyOS", VERSION)

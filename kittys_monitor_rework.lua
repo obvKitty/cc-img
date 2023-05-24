@@ -45,7 +45,7 @@ for i=1,y,1 do
         icolor = 1
     end
     ff.writeLine(string.format("m.setBackgroundColor(%s)", usable_colors[math.floor(icolor)]))
-    icolor = icolor + 0.5
+    icolor = icolor + 1
     
     for i=1,x,1 do
         ff.writeLine("m.write(\" \")")

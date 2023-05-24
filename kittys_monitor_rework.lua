@@ -41,6 +41,9 @@ local usable_colors = {colors.red, colors.orange, colors.yellow, colors.green, c
 icolor = 1
 for i=1,y,1 do
     ff.writeLine(string.format("m.setCursorPos(1,%s)", i)) 
+    if (icolor > #usable_colors) then
+        icolor = 1
+    end
     ff.writeLine(string.format("m.setBackgroundColor(%s)", usable_colors[math.floor(icolor)]))
     icolor = icolor + 0.5
     

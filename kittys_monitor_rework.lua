@@ -32,11 +32,13 @@ ff.write("")
 ff.close()
 ff = fs.open("frame.lua", "a")
 
-for i,p in wrap_peripherals() do --for every connected peripheral
+for i,p in pairs(wrap_all_peripherals()) do --for every connected peripheral
+    reset_monitor(p)
     x, y = p.getSize()
-    for i=1,y,-1 do
-        for i=1,x,-1 do
-            p.write("#")
+    for i=1,y,1 do
+        ff.writeLine(string.format("m.setCursorPos(1,%s)", y)) 
+        for i=1,x,1 do
+            ff.writeLine("m.write(\"#\")")
         end
     end
 end
